@@ -1,0 +1,221 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Social Media Dashboard with Theme Switcher</title>
+
+    <!-- ---- custom css ---- -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<div class="container">
+
+
+    <!-- ---- Top title ---- -->
+    <div class="top-container">
+        <div class="top-title">
+            <h1 class="text-xlg">Social Media Dashboard</h1>
+            <p class="text-md">Total Followers: 23,004</p>
+        </div>
+            
+        <div class="toggle-switch">
+            <p class="text-md"> Dark Mode</p>
+    <!-- ---- Rounded switch ----- -->
+            <label class="switch">
+                <input type="checkbox" class="checkbox" id="switch" onchange="toggleName()">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+    
+    <!-- ---- Big Cards ----- -->
+
+    <div class="wrapper">
+        <div class="card-lg border-fb">
+            <div class="flex">
+                <img src="images/icon-facebook.svg" alt="facebook icon">
+                <p class="text-sm">@nathanf</p>
+            </div>  
+            <div class="card-body">
+                <h3 class="text-lg">1987</h3>
+                <p class="text-space">followers</p>
+            </div>      
+            <div class="flex">
+                <img class="icon" src="images/icon-up.svg" alt="icon up">
+                <p class="text-xsm txt-green">12 Today</p>
+            </div>      
+        </div>
+
+        <div class="card-lg border-twt">
+            <div class="flex">
+                <img src="images/icon-twitter.svg" alt="twitter icon">
+                <p class="text-sm">@nathanf</p>
+            </div>
+                <h3 class="text-lg">1044</h3>
+                <p class="text-space">followers</p>
+            <div class="flex">
+                <img class="icon"src="images/icon-up.svg" alt="icon up">
+                <p class="text-xsm txt-green">99 Today</p>
+            </div>
+        </div>
+
+        <div class="card-lg border-int">
+            <div class="flex">
+                <img src="images/icon-instagram.svg" alt="instagram icon">
+                <p class="text-sm">@realnathanf</p>
+            </div>
+            <h3 class="text-lg">11k</h3>
+            <p class="text-space">followers</p>
+            <div class="flex">
+               <img class="icon" src="images/icon-up.svg" alt="icon up">
+                <p class="text-xsm txt-green">1099 Today</p> 
+            </div>
+            
+        </div>
+
+        <div class="card-lg border-yt">
+            <div class="flex">
+                <img src="images/icon-youtube.svg" alt="youtube icon">
+                <p class="text-sm">Nathan F.</p>
+            </div>  
+            <h3 class="text-lg">1987</h3>
+            <p class="text-space">subscribers</p>
+            <div class="flex">
+                <img class="icon"src="images/icon-down.svg" alt="icon down">
+                <p class="text-xsm txt-red">144 Today</p>
+            </div>
+           
+        </div>
+    </div>
+
+        <h2>Overview - Today</h2>
+
+<!-- ---- Medium card -------- -->
+
+    <div class="wrapper-two">
+        <div class="card-md">
+            <div class="card-md-flex bottom">
+                <p class="text-md">Page Views</p>
+                <img src="images/icon-facebook.svg" alt="facebook icon">  
+            </div>
+            
+            <div class="card-md-flex">
+                <h3 class="text-mdx">87</h3>
+                <div class="flex">
+                  <img class="icon" src="images/icon-up.svg" alt="icon up">
+                  <p class="text-xsm txt-green">3%</p>  
+                </div>
+                
+            </div>  
+        </div>
+
+        <div class="card-md">
+            <div class="card-md-flex bottom">
+                <p class="text-md">Likes</p>
+               <img src="images/icon-facebook.svg" alt="facebook icon">  
+            </div>
+            
+            <div class="card-md-flex">
+                <h3 class="text-mdx">52</h3>
+                <div class="flex">
+                    <img class="icon" src="images/icon-down.svg" alt="icon down">
+            <p class="text-xsm txt-red">2%</p>
+                </div>
+            </div>     
+        </div>
+
+        <div class="card-md">
+            <div class="card-md-flex bottom">
+                <p class="text-md">Likes</p>
+                <img src="images/icon-instagram.svg" alt="facebook icon">
+                
+            </div>
+            
+            <div class="card-md-flex">
+                <h3 class="text-mdx">5462</h3>
+                <div class="flex">
+                    <img class="icon" src="images/icon-up.svg" alt="icon up">
+                    <p class="text-xsm txt-green">2257%</p>
+                </div>    
+            </div>     
+        </div>
+
+        <div class="card-md">
+            <div class="card-md-flex bottom">
+                <p class="text-md">Profile Views</p>
+                <img src="images/icon-instagram.svg" alt="facebook icon">
+                
+            </div>     
+            <div class="card-md-flex">
+                <h3 class="text-mdx">52k</h3>
+                <div class="flex">
+                     <img class="icon-green" src="images/icon-up.svg" alt="icon up">
+                    <p class="text-xsm txt-green">1375%</p>
+                </div>  
+            </div> 
+        </div>
+
+        <div class="card-md">
+            <div class="card-md-flex bottom">
+              <p class="text-md">Retweets</p>  
+              <img src="images/icon-twitter.svg" alt="facebook icon">
+            </div>
+            
+            <div class="card-md-flex">
+                <h3 class="text-mdx">117</h3>
+                <div class="flex">
+                     <img class="icon" src="images/icon-up.svg" alt="icon up">
+                    <p class="text-xsm txt-green">303%</p> 
+                </div>
+            </div>
+        </div>
+
+        <div class="card-md">
+            <div class="card-md-flex bottom">
+               <p class="text-md">Likes</p>
+                <img src="images/icon-twitter.svg" alt="facebook icon">
+            </div>
+            
+            <div class="card-md-flex">
+                <h3 class="text-mdx">507</h3>
+                <div class="flex">
+                    <img class="icon" src="images/icon-up.svg" alt="icon up">
+                    <p class="text-xsm txt-green">553%</p>
+                </div>       
+            </div>   
+        </div>  
+        <div class="card-md">
+            <div class="card-md-flex bottom">
+               <p class="text-md">Like</p> 
+               <img src="images/icon-youtube.svg" alt="facebook icon">
+            </div>
+            
+            <div class="card-md-flex">
+                <h3 class="text-mdx">107</h3>
+                <div class="flex">
+                    <img class="icon" src="images/icon-down.svg" alt="icon down">
+                    <p class="text-xsm txt-red">19%</p>  
+                </div>
+            </div>       
+        </div>
+
+        <div class="card-md">
+            <div class="card-md-flex bottom">
+                <p class="text-md">Total Views</p> 
+                <img src="images/icon-youtube.svg" alt="facebook icon">
+            </div>
+            
+           <div class="card-md-flex">
+               <h3 class="text-mdx">1407</h3>
+               <div class="flex">
+                   <img class="icon" src="images/icon-down.svg" alt="icon down">
+                    <p class="text-xsm txt-red">12%</p>
+               </div>       
+           </div>      
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

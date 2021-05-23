@@ -1,0 +1,302 @@
+/* Frontend Mentor Challenge
+Social Media Dashboard Theme switcher 
+Date:May, 18 2021 
+By: Tu Digital Marketer
+*/
+
+/* -----  Fonts ----- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* ----   Reset ---- */
+
+*, 
+*::after,
+*::before  {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+    margin:0;
+    padding:0;
+}
+
+/* ----  Variables ----- */
+
+:root {
+   --clr-limegreen: hsl(163, 72%, 41%);
+   --clr-bright-red:hsl(356, 69%, 56%);
+   --clr-facebook:hsl(208, 92%, 53%);
+   --clr-twitter:hsl(203, 89%, 53%);
+   --clr-instagram:linear-gradient( hsl(37, 97%, 70%) to hsl(329, 70%, 58%));
+   --clr-youtube:hsl(348, 97%, 39%);  
+}
+
+.theme-dark {
+    --clr-bg:hsl(230, 17%, 14%);
+    --clr-bg-pattern:hsl(230, 20%, 35%);
+    --clr-bg-card:hsl(229, 19%, 22%);
+    --clr-dark-text:hsl(228, 34%, 66%);
+    --clr-text:hsl(0, 0%, 100%);
+    --clr-toggle:hsl(228, 28%, 20%);
+    --clr-bg-toggle:#3eda82;
+}
+
+.theme-light {
+    --clr-bg:hsl(0, 0%, 100%);
+    --clr-bg-pattern:hsl(220, 3%, 79%);
+    --clr-bg-card:hsl(227, 47%, 96%);
+    --clr-dark-text:hsl(228, 12%, 44%);
+    --clr-text:hsl(230, 17%, 14%);
+    --clr-toggle:hsl(230,22%,74%);
+    --clr-bg-toggle:hsl(228, 12%, 44%);
+}
+
+body {
+    min-height: 100vh;
+    margin:1.875rem;
+    line-height: 1.5;
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    background-color: var(--clr-bg);
+    
+}
+
+img {
+    
+    display: inline-block;
+}
+
+/* -----   General styles ----- */
+
+/*  ----- colors theme ---- */
+.text-xlg,
+.text-lg, 
+.text-space,
+.text-mdx,
+h2 {
+    color:var(--clr-text);
+}
+
+.text-md,
+.text-sm { 
+    color:var(--clr-dark-text);
+}
+
+.card-lg:hover,
+.card-md:hover {
+    background-color: var(--clr-bg-pattern);
+}
+
+
+ .border-fb {
+    border-top: 3px solid var(--clr-facebook);
+}
+
+.border-twt {
+    border-top: 3px solid var(--clr-twitter);
+}
+
+.border-int {
+    background-image: linear-gradient(to right, #fdc468, #df4996);
+    background-position: top left;
+    background-size: 100% 4px;
+    background-repeat: no-repeat;
+
+}
+
+.border-yt {
+    border-top: 3px solid var(--clr-youtube);
+}
+
+/*  ---- text font & spacing ----- */
+
+h2 {
+   margin-top:32px;
+   margin-bottom: 20px; 
+}
+
+.text-lg {
+    font-size: 3.5rem;
+    margin-bottom: 0;
+    
+}
+
+.text-md {  
+    font-weight:700;
+}
+
+.text-mdx {
+    font-size: 2rem;
+}
+
+.text-sm {
+    font-size: .75rem;   
+    font-weight:700;
+}
+
+.text-xsm {
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+.txt-green {
+    color: var(--clr-limegreen);
+}
+
+.txt-red {
+    color:var(--clr-bright-red);
+}
+
+.text-space {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+}
+
+.top-title {
+    padding-bottom: 24px;
+    border-bottom: 2px solid var(--clr-dark-text);
+}
+
+/* ----- Utilities ------ */
+.flex {
+    display:flex;
+    align-items: center;  
+}
+
+img + p {
+    margin-left: 5px;
+}
+
+/* ---- toggle switch ----- */
+
+.toggle-switch {
+    padding-top:20px;
+    padding-bottom:20px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width:900px) {
+    .top-title {
+        border-bottom: none;
+    }
+
+    .toggle-switch {
+        justify-content: flex-end;
+        gap:10px;
+        align-items: center;
+    }
+
+    .top-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
+/*  -------  rounded switch from W3schools.com ------- */
+.switch {
+    position: relative;
+    display: inline-block;
+    width:60px;
+    height:34px;
+}
+
+.switch input {
+    opacity: 0;
+    width:0;
+    height:0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--clr-bg-toggle);
+    -webkit-transition: .4s;
+    transition:.4s;
+
+    border-radius:34px;
+}
+
+.slider::before {
+    position: absolute;
+    content:"";
+    height: 26px;
+    width: 26px;
+    left:4px;
+    bottom:4px;
+    background-color:var(--clr-toggle);
+    -webkit-transition:.4s;
+    transition:.4s;
+
+    border-radius: 50%;
+}
+
+.checkbox:checked + .slider  {
+    background-color:var(--clr-bg-toggle);
+    opacity: 1;
+}
+
+.checkbox:checked + .slider::before {
+    background: var(--clr-toggle);
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+  
+
+/* ---- Cards & Media queries----- */
+
+.card-lg {
+    padding: 30px;
+    margin-top: 25px;
+    
+    border-radius: 5px;
+    background-color: var(--clr-bg-card);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card-md {
+    padding: 30px;
+    margin-top: 25px;
+    
+    border-radius: 5px;
+    background-color: var(--clr-bg-card);
+}
+
+.card-md-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+
+.bottom {
+    padding-bottom: 20px;
+}
+
+@media (min-width:900px) {
+    .wrapper, 
+    .wrapper-two {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+}
+
+
